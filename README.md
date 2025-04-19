@@ -3,57 +3,41 @@
 This project implements a deep learning model to detect screams in audio, distinguishing them from ambient sounds and conversations using TensorFlow. The model achieves ~85% accuracy on a multi-class classification task (Screams, Ambient, Conversations) and includes interpretability analysis with SHAP.
 ---
 ## Project Structure
-data/ – All audio datasets
 
-ambient/ – Raw ambient audio (from UrbanSound8K)
+scream-detector-project/
+├── data/                          # Audio data organized by class
+│   ├── ambient/                   # Raw ambient audio (from UrbanSound8K)
+│   ├── ambient_converted/        # Processed ambient audio (16 kHz, mono)
+│   ├── screams/                  # Scream audio samples (74 WAV files)
+│   ├── conversations/            # Conversation audio (~70 WAV files)
+│
+├── images/                        # Visualizations and interpretation outputs
+│   ├── confusion_matrix.png
+│   ├── shap_class_0.png          # SHAP plot - Ambient class
+│   ├── shap_class_1.png          # SHAP plot - Screams class
+│   ├── shap_class_2.png          # SHAP plot - Conversations class
+│
+├── models/                        # Saved trained models
+│   └── scream_model.h5           # Trained model file
+│
+├── src/                           # Source code and utility scripts
+│   ├── train.py                  # Model training script
+│   ├── evaluate.py               # Evaluation script
+│   ├── interpret.py              # SHAP model interpretation
+│   ├── preprocess.py             # Data preprocessing utilities
+│   ├── convert_audio.py          # Audio conversion script
+│   ├── filter_urbansound8k.py    # Filter and select audio from UrbanSound8K
+│   ├── model.py                  # CNN model architecture
+│   └── UrbanSound8K/
+│       ├── FREESOUNDCREDITS.txt  # UrbanSound8K license and credits
+│       └── metadata/
+│           └── UrbanSound8K.csv  # Dataset metadata
+│
+├── venv/                          # Virtual environment (excluded from version control)
+│
+├── README.md                      # Project documentation
+└── requirements.txt               # Python dependencies
 
-ambient_converted/ – Preprocessed ambient audio (16 kHz, mono)
-
-screams/ – Scream audio samples (74 WAV files)
-
-conversations/ – Conversation audio (~70 WAV files)
-
-images/ – Visual outputs for evaluation and interpretation
-
-confusion_matrix.png – Confusion matrix from evaluation
-
-shap_class_0.png – SHAP plot for Ambient class
-
-shap_class_1.png – SHAP plot for Screams class
-
-shap_class_2.png – SHAP plot for Conversations class
-
-models/ – Trained model files
-
-scream_model.h5 – Final trained model
-
-src/ – Source code and helper scripts
-
-train.py – Script to train the model
-
-evaluate.py – Model evaluation script
-
-interpret.py – SHAP interpretability tool
-
-preprocess.py – Audio preprocessing utilities
-
-convert_audio.py – Audio format conversion script
-
-filter_urbansound8k.py – Filter audio from UrbanSound8K
-
-model.py – CNN model architecture
-
-UrbanSound8K/
-
-FREESOUNDCREDITS.txt – License and attribution info
-
-metadata/UrbanSound8K.csv – UrbanSound8K metadata
-
-venv/ – Python virtual environment (excluded from version control)
-
-requirements.txt – Python dependencies list
-
-README.md – Project overview and documentation
 
 
 ---
