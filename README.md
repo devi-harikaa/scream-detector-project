@@ -145,6 +145,7 @@ Class Imbalance: Low F1 for Conversations is due to fewer training samples. Cons
 SHAP Compatibility: Uses GradientExplainer to support TensorFlow models with batch normalization layers.
 
 CPU/GPU: Runs on CPU by default. For GPU support, install CUDA 11.0, cuDNN 8.0, and tensorflow-gpu.
+
 ---
 
 ## 🔮 Future Improvements
@@ -156,11 +157,13 @@ Improve generalization with dropout/regularization
 Use class weights for better balance during training
 
 Extend project to support real-time scream detection from live microphone input
+
 ---
 
 ## 📝 License
 
 MIT License
+
 ---
 
 ## 📬 Contact
