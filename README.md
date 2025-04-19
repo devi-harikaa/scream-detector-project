@@ -100,18 +100,14 @@ scream-detector-project/
 Create Virtual Environment
 
 ```bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate       # For Linux/Mac
-.\venv\Scripts\activate        # For Windows
+   python -m venv venv
+   source venv/bin/activate       # For Linux/Mac
+   .\venv\Scripts\activate        # For Windows
 ```
 Install Dependencies
 
 ```bash
-Copy
-Edit
-pip install -r requirements.txt
+    pip install -r requirements.txt
 ```
 Prepare Dataset
 
@@ -132,17 +128,13 @@ Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
 🧪 Usage
 Train the Model
 ```bash
-Copy
-Edit
-python src/train.py
-Model saved to models/scream_model.h5
+   python src/train.py
+   Model saved to models/scream_model.h5
 ```
 Evaluate the Model
 ```bash
-Copy
-Edit
-python src/evaluate.py
-Outputs evaluation metrics and saves images/confusion_matrix.png
+   python src/evaluate.py
+   Outputs evaluation metrics and saves images/confusion_matrix.png
 ```
 
 
