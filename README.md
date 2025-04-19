@@ -4,7 +4,7 @@ This project implements a deep learning model to detect screams in audio, distin
 ---
 ## Project Structure
 
-scream-detector-project/
+scream-detector-project/ /n
 ├── data/                          # Audio data organized by class
 │   ├── ambient/                   # Raw ambient audio (from UrbanSound8K)
 │   ├── ambient_converted/        # Processed ambient audio (16 kHz, mono)
