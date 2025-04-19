@@ -97,20 +97,17 @@ scream-detector-project/
    ```bash
    git clone https://github.com/devi-harikaa/scream-detector-project.git
    cd scream-detector-project
-Create Virtual Environment
-
-```bash
+2. **Create Virtual Environment**
+   ```bash
    python -m venv venv
    source venv/bin/activate       # For Linux/Mac
    .\venv\Scripts\activate        # For Windows
-```
-Install Dependencies
-
-```bash
+    ```
+3. **Install Dependencies**
+   ```bash
     pip install -r requirements.txt
-```
-Prepare Dataset
-
+   ```
+4. **Prepare Dataset**
 Download UrbanSound8K
 
 Organize files into:
@@ -125,27 +122,26 @@ Ensure all WAV files are 16 kHz, mono.
 
 Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
 ```
-🧪 Usage
-Train the Model
-```bash
+##🧪 Usage
+
+5. **Train the Model**
+   ```bash
    python src/train.py
    Model saved to models/scream_model.h5
-```
-Evaluate the Model
-```bash
+   ```
+6. **Evaluate the Model**
+   ```bash
    python src/evaluate.py
    Outputs evaluation metrics and saves images/confusion_matrix.png
-```
-
-
-⚠️ Notes
+   ```
+##⚠️ Notes
 Class Imbalance: Low F1 for Conversations is due to fewer training samples. Consider oversampling or using class weights in train.py.
 
 SHAP Compatibility: Uses GradientExplainer to support TensorFlow models with batch normalization layers.
 
 CPU/GPU: Runs on CPU by default. For GPU support, install CUDA 11.0, cuDNN 8.0, and tensorflow-gpu.
 
-🔮 Future Improvements
+##🔮 Future Improvements
 Augment dataset with more Screams and Conversations
 
 Improve generalization with dropout/regularization
