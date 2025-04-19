@@ -123,7 +123,6 @@ Ensure all WAV files are 16 kHz, mono.
 Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
 ```
 ---
-
 ## 🧪 Usage
 
 5. **Train the Model**
