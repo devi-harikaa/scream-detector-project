@@ -124,7 +124,7 @@ Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
 ```
 ---
 
-##🧪 Usage
+## 🧪 Usage
 
 5. **Train the Model**
    ```bash
