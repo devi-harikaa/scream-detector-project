@@ -3,7 +3,7 @@
 This project implements a deep learning model to detect screams in audio, distinguishing them from ambient sounds and conversations using TensorFlow. The model achieves ~85% accuracy on a multi-class classification task (Screams, Ambient, Conversations) and includes interpretability analysis with SHAP.
 ---
 ## Project Structure
-
+'''
 scream-detector-project/ /n
 ├── data/                          # Audio data organized by class
 │   ├── ambient/                   # Raw ambient audio (from UrbanSound8K)
@@ -39,7 +39,7 @@ scream-detector-project/ /n
 └── requirements.txt               # Python dependencies
 
 
-
+'''
 ---
 
 ## 🎧 Dataset
