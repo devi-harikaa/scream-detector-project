@@ -122,6 +122,8 @@ Ensure all WAV files are 16 kHz, mono.
 
 Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
 ```
+---
+
 ##🧪 Usage
 
 5. **Train the Model**
@@ -134,14 +136,19 @@ Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
    python src/evaluate.py
    Outputs evaluation metrics and saves images/confusion_matrix.png
    ```
-##⚠️ Notes
+---
+   
+## Notes
+
 Class Imbalance: Low F1 for Conversations is due to fewer training samples. Consider oversampling or using class weights in train.py.
 
 SHAP Compatibility: Uses GradientExplainer to support TensorFlow models with batch normalization layers.
 
 CPU/GPU: Runs on CPU by default. For GPU support, install CUDA 11.0, cuDNN 8.0, and tensorflow-gpu.
+---
 
-##🔮 Future Improvements
+## 🔮 Future Improvements
+
 Augment dataset with more Screams and Conversations
 
 Improve generalization with dropout/regularization
@@ -149,9 +156,13 @@ Improve generalization with dropout/regularization
 Use class weights for better balance during training
 
 Extend project to support real-time scream detection from live microphone input
+---
 
-📝 License
+## 📝 License
+
 MIT License
+---
 
-📬 Contact
+## 📬 Contact
+
 For queries or suggestions, contact Neeharika at: harikadevi414@gmail.com
