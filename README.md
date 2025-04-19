@@ -167,4 +167,4 @@ MIT License
 
 ## 📬 Contact
 
-For queries or suggestions, contact Neeharika at: harikadevi414@gmail.com
+For queries or suggestions, contact at: harikadevi414@gmail.com
