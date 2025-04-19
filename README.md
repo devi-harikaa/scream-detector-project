@@ -3,7 +3,7 @@
 This project implements a deep learning model to detect screams in audio, distinguishing them from ambient sounds and conversations using TensorFlow. The model achieves ~85% accuracy on a multi-class classification task (Screams, Ambient, Conversations) and includes interpretability analysis with SHAP.
 ---
 ## 📁 Project Structure
-bash
+```bash
 scream-detector-project/
 ├── data/                          # Audio data organized by class
 │   ├── ambient/                   # Raw ambient audio (from UrbanSound8K)
@@ -37,7 +37,7 @@ scream-detector-project/
 │
 ├── README.md                      # Project documentation
 └── requirements.txt               # Python dependencies
-
+```
 ---
 
 ## 🎧 Dataset
@@ -99,24 +99,26 @@ scream-detector-project/
    cd scream-detector-project
 Create Virtual Environment
 
-bash
+```bash
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate       # For Linux/Mac
 .\venv\Scripts\activate        # For Windows
+```
 Install Dependencies
 
-bash
+```bash
 Copy
 Edit
 pip install -r requirements.txt
+```
 Prepare Dataset
 
 Download UrbanSound8K
 
 Organize files into:
-
+```
 data/screams/
 
 data/ambient_converted/
@@ -126,32 +128,23 @@ data/conversations/
 Ensure all WAV files are 16 kHz, mono.
 
 Use src/convert_audio.py and src/filter_urbansound8k.py as needed.
-
+```
 🧪 Usage
 Train the Model
-bash
+```bash
 Copy
 Edit
 python src/train.py
 Model saved to models/scream_model.h5
-
+```
 Evaluate the Model
-bash
+```bash
 Copy
 Edit
 python src/evaluate.py
 Outputs evaluation metrics and saves images/confusion_matrix.png
+```
 
-Interpret the Model with SHAP
-bash
-Copy
-Edit
-python src/interpret.py
-Generates SHAP plots for all three classes in images/
-![shap_class_2](https://github.com/user-attachments/assets/25d5b8f8-096b-4f81-93e6-d00925b50fde)
-![shap_class_1](https://github.com/user-attachments/assets/eb2d0ec9-785c-4aee-97d8-69e60c8ca1b1)
-![shap_class_0](https://github.com/user-attachments/assets/367bf89d-7168-463a-852d-c1cd6331f129)
-![confusion_matrix](https://github.com/user-attachments/assets/8a5cde2d-217d-451e-9bb7-02f4257a5c5b)
 
 ⚠️ Notes
 Class Imbalance: Low F1 for Conversations is due to fewer training samples. Consider oversampling or using class weights in train.py.
